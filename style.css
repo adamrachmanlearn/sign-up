@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* font */
+@font-face {
+    font-family: "norse";
+    src:
+        url(./fonts/norse-bold-webfont.woff2) format(woff2),
+        url(./fonts/norse-bold-webfont.woff) format(woff);
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+.side,
+.main {
+    height: 100vh;
+}
+
+.side {
+    background-image: url(./pictures/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3;
+}
+
+/* styling side */
+.side div {
+    height: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    margin-top: 120px;
+    font-family: "norse", sans-serif;
+    font-size: 4.2rem;
+}
+
+.side > p {
+    text-align: center;
+    font-size: 0.7rem;
+    opacity: 0.87;
+    margin-bottom: 0.7rem;
+}
+
+img {
+    width: 4.2rem;
+}
+
+/* styling main */
+.main-header {
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 56ch;
+    margin-left: 34px;
+    margin-bottom: 48px;
+    opacity: 0.87;
+}
+
+.main-header p:last-child {
+    margin-top: 1rem;
+}
+
+.form-container {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form-submit {
+    margin-left: 34px;
+}
+
+.form-submit button {
+    margin: 32px 0 34px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #596d48;
+    border: none;
+    border-radius: 6px;
+    color: whitesmoke;
+    padding: 0.8rem 3.6rem;
+}
+
+.form-submit p {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+a {
+    text-decoration: none;
+    color: #596d48;
+}
+
+/* styling form box */
+.form-container {
+    padding: 24px 34px;
+}
+
+.form-container > p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    opacity: 0.60;
+    margin-bottom: 16px;
+}
+
+.form-row {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 4rem;
+}
+
+.form-row > p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+input {
+    width: 200px;
+    height: 1.6rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 3px;
+    padding: 0.2rem 0.3rem;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: lightblue;
+}
+
+input:invalid {
+    border-color: lightcoral;
+}
+
+span {
+    position: relative;
+    width: 100%;
+}
+
+input[id="password"]:invalid + span::after {
+    position: absolute;
+    content: "*Password do not match";
+    font-size: 0.7rem;
+    color: lightcoral;
+}
